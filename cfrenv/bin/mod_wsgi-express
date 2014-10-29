@@ -1,0 +1,10 @@
+#!/home/ubuntu/PycharmProjects/CFR/cfrenv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'mod-wsgi==4.3.0','console_scripts','mod_wsgi-express'
+__requires__ = 'mod-wsgi==4.3.0'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('mod-wsgi==4.3.0', 'console_scripts', 'mod_wsgi-express')()
+    )

@@ -26,7 +26,7 @@ def saveContacts(request):
         allphones = contact[Constants.UploadConstants.ALLPHONES]
         allemail = contact[Constants.UploadConstants.ALLEMAILS]
         count = 0
-        contactphone = [0,0,0]
+        contactphone = ["","",""]
         contactemail = ["","",""]
         for phone in allphones:
             if count < 3:

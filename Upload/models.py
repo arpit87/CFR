@@ -4,9 +4,9 @@ from django.db import models
 class Contacts(models.Model):
     cfrid = models.IntegerField(null=False)
     name = models.CharField(max_length=140)
-    phone1 = models.IntegerField(null=True)  
-    phone2 = models.IntegerField(null=True)
-    phone3 = models.IntegerField(null=True)
+    phone1 = models.CharField(max_length=25,null=True)
+    phone2 = models.CharField(max_length=25,null=True)
+    phone3 = models.CharField(max_length=25,null=True)
     email1 = models.CharField(max_length=255,null=True)
     email2 = models.CharField(max_length=255,null=True)
     email3 = models.CharField(max_length=255,null=True)
@@ -17,7 +17,7 @@ class Contacts(models.Model):
 
 class SMS(models.Model):
     cfrid = models.IntegerField(null=False)
-    number = models.IntegerField(null=False)    
+    number = models.CharField(max_length=25,null=False)
     date_time = models.DateTimeField(null=False)
     text = models.CharField(max_length=255)
     type = models.CharField(max_length=255)
@@ -28,7 +28,7 @@ class SMS(models.Model):
 class CallLog(models.Model):
     cfrid = models.IntegerField(null=False)
     name = models.CharField(max_length=255)
-    number = models.IntegerField(null=False)    
+    number = models.CharField(max_length=25,null=False)
     date_time = models.DateTimeField(null=False)  
     duration = models.IntegerField(null=False) 
     type = models.CharField(max_length=255)
